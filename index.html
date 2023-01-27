@@ -13,9 +13,53 @@
 </head>
 
 <body>
+    <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="assets/aston-martin.jpg" alt="aston-martin"></div>
+                <div class="swiper-slide"><img src="assets/audi-rs-e-tron-gt.jpg" alt="audi-rs-e-tron-gt"></div>
+                <div class="swiper-slide"><img src="assets/maserati-mc20.jpg" alt="maserati-mc20"></div>
+                <div class="swiper-slide"><img src="assets/nio-et5.jpg" alt="nio-et5"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
 
     <!-- Swiper JS Script -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+
+            // For autoplay feature
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 
 </html>
