@@ -9,18 +9,29 @@
     width: 100%;
     height: 100vh;
     background: #222;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .swiper {
-    width: 80%;
-    height: fit-content;
+    width: 100%;
+    height: 100vh;
 }
 
 .swiper-slide img {
     width: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+}
+
+.swiper-slide .title-text {
+    position: absolute;
+    width: 100%;
+    top: 90%;
+    cursor: pointer;
 }
 
 .swiper .swiper-button-prev,
@@ -30,4 +41,25 @@
 
 .swiper .swiper-pagination-bullet-active {
     background: #fff;
+}
+
+/* CSS for small screen */
+@media only screen and (max-width: 750px) {
+
+    .swiper {
+        height: fit-content;
+    }
+
+    .swiper-slide {
+        font-size: 12px;
+    }
+
+    .swiper-slide .title-text {
+        top: 80%;
+    }
+
+    .swiper .swiper-button-prev::after,
+    .swiper .swiper-button-next::after {
+        font-size: 25px;
+    }
 }
